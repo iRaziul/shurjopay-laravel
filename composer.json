@@ -1,0 +1,49 @@
+{
+    "name": "raziul/shurjopay-laravel",
+    "description": "ShurjoPay payment gateway integration for Laravel.",
+    "keywords": [
+        "shurjopay",
+        "payment gateway",
+        "shurjopay gateway",
+        "shurjopay php",
+        "shurjopay laravel",
+        "shurjopay payment gateway laravel"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raziul Islam",
+            "email": "raziul.cse@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raziul\\Shurjopay\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Raziul\\Shurjopay\\ShurjopayServiceProvider"
+            ],
+            "aliases": {
+                "Shurjopay": "Raziul\\Shurjopay\\Facades\\Shurjopay"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
