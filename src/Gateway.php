@@ -37,7 +37,7 @@ class Gateway
             throw new ShurjopayException('ShurjoPay: Please provide `username` and `password`');
         }
 
-        if (empty($config['sandbox_mode'])) {
+        if (!isset($config['sandbox_mode'])) {
             throw new ShurjoPayException('ShurjoPay: The value of `sandbox_mode` must be true or false');
         }
 
