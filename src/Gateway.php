@@ -131,7 +131,7 @@ class Gateway
      * 
      * @throws ShurjoPayException
      */
-    public function verify(string $order_id): Payment
+    public function verifyPayment(string $order_id): Payment
     {
         $token = $this->getToken();
         $payload = json_encode(['order_id' => $order_id]);
